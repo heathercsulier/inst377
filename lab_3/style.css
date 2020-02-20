@@ -48,12 +48,18 @@ p, li {
   line-height: 1.5;
 }
 
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
 /* || header layout */
 
 header {
   margin-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
+  background: cornflowerblue;
 }
 
 body > * {
@@ -111,6 +117,7 @@ nav a, nav span {
 
 main {
   display: flex;
+  background: cornflowerblue;
 }
 
 article, section {
@@ -130,9 +137,12 @@ aside a {
 }
 
 aside img {
-  max-width: 100%;
+  /* max-width: 100%;  */
+  width: 100px;
+  height: 100px;
 }
 
 footer {
   margin-top: 10px;
+  background: cornflowerblue;
 }
