@@ -59,16 +59,16 @@ header {
   margin-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
-  background: cornflowerblue;
+  background: rgba(100, 149, 237, .8);
 }
 
 body > * {
-  background-color: red;
+  background: rgba(100, 149, 237, .8);
   padding: 1%;
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: rgba(0,255,0,0.5);
+  background: rgba(100, 149, 237, .8);
   padding: 1%;
 }
 
@@ -117,7 +117,7 @@ nav a, nav span {
 
 main {
   display: flex;
-  background: cornflowerblue;
+  background: rgba(100, 149, 237, .8);
 }
 
 article, section {
@@ -144,5 +144,5 @@ aside img {
 
 footer {
   margin-top: 10px;
-  background: cornflowerblue;
+  background: rgba(100, 149, 237, .8);
 }
