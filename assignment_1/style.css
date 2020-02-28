@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+html {
+    font-family: "Exo 2";
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: cornflowerblue;
+    align-items: center;
+    padding: 5px;
+}
+
+.wrapper {
+    padding: 15px;
+    background: darkseagreen;
+}
+
+.container {
+    display: flex;
+    /* justify-content: space-around;   */
+    justify-content: cennter;
+    margin-right: 5px;
+ }
+
+.one {
+    flex-direction: column;
+    /* margin-top: -15px; */
+    /* align-items: center; */
+    display: flex;
+    align-items: stretch;
+    padding-top: 0px;
+    margin-top: -4px;
+    /* width: 30%; */
+}
+
+.one div {
+    display: flex;
+    background: #ccc;
+    /* height: 50px; */
+    align-items: center;
+    padding: 15px;
+}
+
+.two {
+    background: #ccc;
+    height: 100%;
+    padding: 5px;
+}
+/* MID-SIZE SCREEN */
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        background: red;
+    }
+}
+
+/* MOBILE-SCREEN */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        background: green;
+    }
+    .container {
+        display: block;
+    }
+    .one {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        flex-direction: row;
+    }
+}
