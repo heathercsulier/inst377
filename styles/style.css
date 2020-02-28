@@ -1,85 +1,89 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
 
 html {
-    font-family: "Exo 2";
+    font-family: "Exo 2";
 }
 
 h1 {
-    padding: 25px;
-    }
+    padding: 25px;
+}
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    background: cornflowerblue;
-    align-items: center;
-    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background: -webkit-linear-gradient(to right, #0575e6, #021b79); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575e6, #021b79);
+    align-items: center;
+    padding: 5px;
+    background: #021b79;
+    color: white;
 }
 
 .wrapper {
-    padding: 15px;
-    background: darkseagreen;
+    padding: 15px;
+ background: #0575e6; /* fallback for old browsers */
 }
 
 .container {
-    display: flex;
-    /* justify-content: space-around;   */
-    justify-content: center;
-    margin-right: 5px;
-    /* margin-left: 5%; */
-    /* margin-right: 5%; */
+    display: flex;
+    /* justify-content: space-around;   */
+    justify-content: center;
+    margin-right: 5px;
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
  }
 
 .one {
-    flex-direction: column;
-    /* margin-top: -15px; */
-    /* align-items: center; */
-    /* display: flex; */
-    align-items: stretch;
-    padding-top: 0px;
-    /* margin-top: -4px; */
-    /* width: 30%; */
-    margin-right: 5px;
+    flex-direction: column;
+    /* margin-top: -15px; */
+    /* align-items: center; */
+    /* display: flex; */
+    align-items: stretch;
+    padding-top: 0px;
+    /* margin-top: -4px; */
+    /* width: 30%; */
+    margin-right: 5px;
 }
 
 .one div {
-    display: flex;
-    background: #ccc;
-    /* height: 50px; */
-    align-items: center;
-    padding: 5px;
-    max-width: 340px;
+    display: flex;
+    background: #ccc;
+    /* height: 50px; */
+    align-items: center;
+    padding: 5px;
+    max-width: 340px;
 }
 
 .two {
-    background: #ccc;
-    height: 100%;
-    padding: 5px;
+    background: #ccc;
+    height: 100%;
+    padding: 5px;
 }
 
 
 @media screen and (min-width: 1000px)
-    /* MID-SIZE SCREEN */
-    @media screen and (max-width: 1000px) {
-    .wrapper {
-    /*background: red; */
+/* MID-SIZE SCREEN */
+@media screen and (max-width: 1000px) {
+    .wrapper {
+/*         background: red; */
     }
 }
 
 /* MOBILE-SCREEN */
-    @media screen and (max-width: 768px) {
-    .wrapper {
-    /* background: green; */
- }
-.container {
-    display: block;
-}
-.one {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    flex-direction: row;
-    /* margin: unset; */
-    align-content: space-between;
+@media screen and (max-width: 768px) {
+    .wrapper {
+/*         background: green; */
+    }
+    .container {
+        display: block;
+    }
+    .one {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        flex-direction: row;
+        /* margin: unset; */
+        align-content: space-between;
     }
 }
