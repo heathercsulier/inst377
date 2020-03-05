@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 4</title>
+    <link src="./style.css" type="text/stylesheet" />
+</head>
+<body>
+    <div>
+        <h1 class="header">Lab 4 Header</h1>
+    </div>
+    <div class="content">
+        hello world
+    </div>
+
+
+    <script>
+        //Question #4. Changes content to [My Name]'s Lab 4
+        var name = "Heather Sulier";
+        let header = document.querySelector(".header");
+        // header.innerText = name + "'s Lab 4";
+
+        //Question 5. Insert 2 paragraphs into class with 'content'. 
+        //Label each paragraph with distinct class name.
+        var content = document.querySelector(".content");
+        var paragraph_1 = document.createElement('p');
+        paragraph_1.className = 'first_paragraph';
+
+        //Complete Question 6.
+        var name_length = name.length;
+        //I added (-1) to remove the count from the string.
+        paragraph_1.innerHTML = "My name has " + (name_length-1) + " characters.";
+
+        //Complete Question 7. Return the 3rd character in my first name
+        var name_arr = name.split(' ');
+        // var first_name = name_arr[0];
+
+        //Complete Question 8 by capitalizing the 3rd character.
+        //var third_char = first_name[2].toUpperCase();
+        var third_char = name_arr[0][2].toUpperCase();
+        var paragraph_2 = document.createElement('p');
+        paragraph_2.className = 'second_paragraph';
+
+        //Completes Questions 9 and 10. added a new line and grabbed the last 3 characters of my last name.
+        var text = "The 3rd character in my name is " + (third_char);
+        var last_three_chars = name_arr[1].slice(-3);
+        text = text + '<br/>' + "The last 3 of my last name are " + last_three_chars;
+        paragraph_2.innerHTML = text;
+
+        //content.innerHTML = ""; //This will wipe out hello world if needed.
+        content.appendChild(paragraph_1);
+        content.appendChild(paragraph_2);
+
+
+        //Completes Question 11. I have already earlier split the name into first and last
+        // using the .split() method.
+        //The following is me trying with using the substring method
+        
+        let firstName = name.substr(0,name.indexOf(' ')); 
+        let lastName = name.substr(name.indexOf(' ')+1);
+
+        //Completed Question 12 by adding up the length of my first and last name.
+        let totalCharCount = firstName.length + lastName.length;
+
+        //Completed Question 13 by adding the full character count to the header.
+        //header.textContent += ". Character Count is " + totalCharCount;
+
+        //I am unsure you wanted me to perform everything in order or if the following was allowed.
+        header.innerText = totalCharCount + " " + name + "'s Lab 4";
+        
+    </script>
+</body>
+</html>
