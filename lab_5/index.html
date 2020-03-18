@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div class="header">Test JSON page</div>
       <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
-      <button class="button" onclick="populateList()">Click me to replace list
+      <button class="button" onClick="populateList()">Click me to replace list
         entries</button>
       <div class="content">
         <ul class="instructions">
@@ -286,7 +286,7 @@
     document.querySelector('.title').innerHTML = "Heather Sulier's List of Countries";
 
     //Question 2-4
-    function populateList()
+    function populateList() {
         var html = "<ol class='countries'>";
 
         var shuffled = countries.sort(function(){return .5 - Math.random()});
@@ -296,7 +296,7 @@
         }
         html += "</ol>";
         document.querySelector('.content').innerHTML = html;
-
+    }
   </script>
 </body>
 
