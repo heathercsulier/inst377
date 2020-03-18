@@ -285,7 +285,17 @@
     document.querySelector('.header').innerHTML = "Heather Sulier's List of Countries";
     document.querySelector('.title').innerHTML = "Heather Sulier's List of Countries";
 
+    //Question 2-4
+    function populateList()
+        var html = "<ol class='countries'>";
 
+        var shuffled = countries.sort(function(){return .5 - Math.random()});
+        var randArr = shuffled.slice(0,25);
+        for (var i=0; i < randArr.length; i++) {
+            html += "<li>" + randArr[i]["name"]+ "</li>";
+        }
+        html += "</ol>";
+        document.querySelector('.content').innerHTML = html;
 
   </script>
 </body>
