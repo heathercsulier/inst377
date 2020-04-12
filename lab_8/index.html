@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Charts Lab</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">Frontend Libraries: Charts Lab</div>
+      <div class="content">
+        When your lab is done, this should be replaced with a useful chart full of food data.
+      </div>
+      <div class="footer">Let's eat out in the future!</div>
+    </div>
+  </div>
+  <script>
+
+    // fetch('./countries.json')
+    //   .then((data) => JSON.parse(data)) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
+    //   .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
+    //     console.log(data);
+
+    //     // return data; // <- this will pass the data to the next "then" statement when I'm ready.
+    //   })
+
+ // Accepts the array and key
+const groupBy = (array, key) => {
+  // Return the end result
+  return array.reduce((result, currentValue) => {
+    // If an array already present for key, push it to the array. Else create an array and push the object
+    (result[currentValue[key]] = result[currentValue[key]] || []).push(currentValue);
+    // Return the current iteration `result` value, this will be taken as next iteration `result` value and accumulate
+    return result;
+  }, {}); // empty object is the initial value for result object
+};
+
+// Group by color as key to the person array
+const returantCategories = groupBy(movies, 'category');
+
+var groupThem = function(xs, key) {
+  return xs.reduce(function(rv, x) {
+    (rv[x[key]] = rv[x[key]] || []).push(x);
+    return rv;
+  }, {});
+};
+
+console.log(groupThem(movies, 'category'))
+console.log("asdfa", returantCategories);
+
+  </script>
+</body>
+
+</html>
